@@ -11,13 +11,12 @@ A dependency-free static site suitable for GitHub Pages. It intentionally contai
 
 ## Video plan
 
-The page currently uses eight distinct video files:
+The page currently uses fifteen distinct representative video files and summarizes the full 180-trial evaluation:
 
-- 4 complete, uncut success rollouts (one per task)
-- 4 representative failures (one per task)
-- 4 representative failure clips (three clothes-folding failures and one cube-grasp failure)
+- 6 complete, uncut success rollouts
+- 9 representative failure clips (six clothes-folding and three cube-catching failures)
 
-Eight videos is a defensible initial set: four uncut rollouts plus four failure clips. Add comparisons only where the initial state and task setup are genuinely matched. Do not fabricate failure rates or comparison results.
+Fifteen videos is the current representative set. The tables report the full trial ledger supplied by the authors; add further videos only when they are de-identified and indexed against that ledger. Do not fabricate failure rates or comparison results.
 
 ## Publish anonymously
 

@@ -15,6 +15,7 @@
       <a class="wordmark" href="#top" aria-label="Return to top">CKT-WAM <span>SUPPLEMENTARY</span></a>
       <nav aria-label="Page navigation">
         <a href="#rollouts">Rollouts</a>
+        <a href="#results">Results</a>
         <a href="#failures">Failures</a>
       </nav>
     </header>
@@ -23,9 +24,9 @@
       <section class="hero shell">
         <p class="eyebrow">Anonymous supplementary material · NeurIPS submission</p>
         <h1>Context knowledge transfer,<br /><em>shown in the real world.</em></h1>
-        <p class="lede">Supplementary real-world recordings for CKT-WAM, a parameter-efficient context knowledge transfer framework between world action models.</p>
+        <p class="lede">Supplementary real-world evidence for CKT-WAM: a parameter-efficient context knowledge transfer framework between world action models.</p>
         <div class="hero-meta" aria-label="Evaluation overview">
-          <span><b>04</b> long-horizon tasks</span><span><b>08</b> video clips</span><span><b>01</b> anonymous page</span>
+          <span><b>04</b> long-horizon tasks</span><span><b>180</b> trials</span><span><b>15</b> representative clips</span>
         </div>
         <a class="scroll-link" href="#rollouts">View demonstrations <span>↓</span></a>
       </section>
@@ -38,11 +39,49 @@
         <div class="video-grid" id="success-grid"></div>
       </section>
 
+      <section class="shell section" id="results">
+        <div class="section-heading">
+          <div><p class="eyebrow">02 — evaluation summary</p><h2>Long-horizon outcomes</h2></div>
+          <p>Each task uses 45 trials. An episode is counted as successful only when every ordered subgoal is completed. The tables summarize the full evaluation; the video suite below currently contains representative clips.</p>
+        </div>
+        <div class="metric-row">
+          <div class="metric"><strong>150 / 180</strong><span>overall successful episodes</span></div>
+          <div class="metric"><strong>83.3%</strong><span>overall task success</span></div>
+          <div class="metric"><strong>[77.2, 88.1]</strong><span>Wilson 95% CI</span></div>
+        </div>
+        <div class="table-wrap light-table">
+          <table>
+            <thead><tr><th>Task</th><th>Stage 1</th><th>Stage 2</th><th>Stage 3</th><th>Final</th></tr></thead>
+            <tbody>
+              <tr><td>Clothes folding</td><td>44/45 · 97.8%</td><td>38/45 · 84.4%</td><td>33/45 · 73.3%</td><td><strong>73.3%</strong></td></tr>
+              <tr><td>Fruit sorting</td><td>43/45 · 95.6%</td><td>40/45 · 88.9%</td><td>—</td><td><strong>88.9%</strong></td></tr>
+              <tr><td>Cube catching</td><td>44/45 · 97.8%</td><td>42/45 · 93.3%</td><td>40/45 · 88.9%</td><td><strong>86.7%</strong></td></tr>
+              <tr><td>Unmanned retail</td><td>44/45 · 97.8%</td><td>41/45 · 91.1%</td><td>38/45 · 84.4%</td><td><strong>84.4%</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="caption">Table R1. Cumulative subgoal success. Final success requires completion of all task-specific stages.</p>
+      </section>
+
       <section class="shell section" id="failures">
         <div class="section-heading">
-          <div><p class="eyebrow">02 — boundary cases</p><h2>Representative failures</h2></div>
-          <p>We include available representative failures to make the operating boundary and sources of error explicit. Missing task–outcome combinations are not substituted with unrelated clips.</p>
+          <div><p class="eyebrow">03 — boundary cases</p><h2>Failure taxonomy</h2></div>
+          <p>We assign one descriptive primary cause per failed episode. These labels describe observed outcomes and do not assert causal chains.</p>
         </div>
+        <div class="table-wrap light-table">
+          <table>
+            <thead><tr><th>Failure type</th><th>Folding</th><th>Sorting</th><th>Cube</th><th>Retail</th><th>Total</th></tr></thead>
+            <tbody>
+              <tr><td>Target / perception confusion</td><td>0</td><td>1</td><td>0</td><td>2</td><td>3</td></tr>
+              <tr><td>Pre-grasp / contact misalignment</td><td>2</td><td>1</td><td>2</td><td>1</td><td>6</td></tr>
+              <tr><td>Grasp slip / unstable placement</td><td>2</td><td>2</td><td>2</td><td>1</td><td>7</td></tr>
+              <tr><td>Collision / clutter occlusion</td><td>0</td><td>0</td><td>1</td><td>2</td><td>3</td></tr>
+              <tr><td>Subgoal transition / error propagation</td><td>3</td><td>1</td><td>1</td><td>1</td><td>6</td></tr>
+              <tr><td>Deformable-state estimation</td><td>5</td><td>0</td><td>0</td><td>0</td><td>5</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="caption">Table R2. Thirty failed episodes across the four tasks. The representative clips below illustrate observed boundaries; the aggregate table summarizes the complete 180-trial evaluation.</p>
         <div class="video-grid" id="failure-grid"></div>
       </section>
 

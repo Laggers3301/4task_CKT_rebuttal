@@ -1,17 +1,24 @@
-// Add .mp4 files under assets/videos/, then replace the empty strings below.
-// Keeping a field empty displays a clean placeholder until that clip is ready.
+// Representative clips from the four-task evaluation. Source filenames are
+// never exposed by the website.
 const tasks = [
-  { title:'Clothes folding', stages:'Remove distracting clothes · unfold target garment · final fold', success:'assets/videos/clothes-folding-rollout.mp4' },
-  { title:'Fruit sorting', stages:'Identify target fruits · place red apple · place pear', success:'assets/videos/fruit-sorting-rollout.mp4' },
-  { title:'Drawer & cube', stages:'Open drawer · place purple cube · close drawer', success:'assets/videos/cube-catching-rollout.mp4' },
-  { title:'Retail retrieval', stages:'Identify requested drink · reach in clutter · retrieve item', success:'assets/videos/unmanned-retail-rollout.mp4' },
+  { title:'Clothes folding', stages:'Remove distracting clothes · unfold target garment · final fold', success:'assets/videos/clothes-folding-success-01.mp4' },
+  { title:'Clothes folding', stages:'Remove distracting clothes · unfold target garment · final fold', success:'assets/videos/clothes-folding-success-02.mp4' },
+  { title:'Fruit sorting', stages:'Identify target fruits · place red apple · place pear', success:'assets/videos/fruit-sorting-success-01.mp4' },
+  { title:'Drawer & cube', stages:'Open drawer · grasp cube · place cube · close drawer', success:'assets/videos/cube-catching-success-01.mp4' },
+  { title:'Drawer & cube', stages:'Open drawer · grasp cube · place cube · close drawer', success:'assets/videos/cube-catching-success-02.mp4' },
+  { title:'Retail retrieval', stages:'Identify requested drink · reach in clutter · retrieve item', success:'assets/videos/unmanned-retail-success-01.mp4' },
 ];
 
 const failures = [
-  { title:'Clothes folding', file:'assets/videos/clothes-folding-failure-clutter.mp4', detail:'Failure: clutter is not cleared before the folding sequence.' },
-  { title:'Clothes folding', file:'assets/videos/clothes-folding-failure-grasp.mp4', detail:'Failure: the target garment is not securely grasped.' },
-  { title:'Clothes folding', file:'assets/videos/clothes-folding-failure-sleeve.mp4', detail:'Failure: the target sleeve is not reached.' },
-  { title:'Drawer & cube', file:'assets/videos/cube-catching-failure-grasp.mp4', detail:'Failure: unsuccessful target-cube grasp.' },
+  { title:'Clothes folding', file:'assets/videos/clothes-folding-failure-01.mp4', detail:'Failure: the initial clutter-removal attempt does not complete.' },
+  { title:'Clothes folding', file:'assets/videos/clothes-folding-failure-02.mp4', detail:'Failure: the garment is not reached securely.' },
+  { title:'Clothes folding', file:'assets/videos/clothes-folding-failure-03.mp4', detail:'Failure: grasp instability during the folding sequence.' },
+  { title:'Clothes folding', file:'assets/videos/clothes-folding-failure-04.mp4', detail:'Failure: sleeve alignment prevents completion of the final fold.' },
+  { title:'Clothes folding', file:'assets/videos/clothes-folding-failure-05.mp4', detail:'Failure: clutter remains after the first subgoal.' },
+  { title:'Clothes folding', file:'assets/videos/clothes-folding-failure-06.mp4', detail:'Failure: the target garment is not acquired for folding.' },
+  { title:'Drawer & cube', file:'assets/videos/cube-catching-failure-01.mp4', detail:'Failure: pre-grasp/contact misalignment during cube acquisition.' },
+  { title:'Drawer & cube', file:'assets/videos/cube-catching-failure-02.mp4', detail:'Failure: unsuccessful target-cube grasp.' },
+  { title:'Drawer & cube', file:'assets/videos/cube-catching-failure-03.mp4', detail:'Failure: drawer-opening collision or subgoal-transition error.' },
 ];
 
 function frame(file, label) {
